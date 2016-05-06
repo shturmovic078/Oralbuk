@@ -15,10 +15,11 @@ worksheet  = workbook.add_worksheet
 include Selenium
 
 caps = WebDriver::Remote::Capabilities.new
-caps[:os] = "Windows"
-caps[:name] = "Watir WebDriver"
-caps[:browser] = "firefox"
-caps[:browser_version] = "44"
+caps['browser'] = 'IE'
+caps['browser_version'] = '10.0'
+caps['os'] = 'Windows'
+caps['os_version'] = '7'
+caps['resolution'] = '1024x768'
 caps["browserstack.debug"] = "true"
 caps["browserstack.local"] = "true"
 browser = Watir::Browser.new(:remote,
