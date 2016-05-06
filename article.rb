@@ -16,7 +16,7 @@ browser = Watir::Browser.new :firefox
 
 counter=0
 puts "Oralb test"
-csv_text = File.read('cascade301.csv',encoding: "iso-8859-1:UTF-8")
+csv_text = File.read('uk_new.csv',encoding: "iso-8859-1:UTF-8")
 
 csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|  
