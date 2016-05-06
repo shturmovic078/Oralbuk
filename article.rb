@@ -12,7 +12,18 @@ workbook = WriteExcel.new('oralbuk.xls')
 
 worksheet  = workbook.add_worksheet
 
-browser = Watir::Browser.new :firefox
+include Selenium
+
+caps = WebDriver::Remote::Capabilities.new
+caps[:os] = "Windows"
+caps[:name] = "Watir WebDriver"
+caps[:browser] = "firefox"
+caps[:browser_version] = "44"
+caps["browserstack.debug"] = "true"
+caps["browserstack.local"] = "true"
+browser = Watir::Browser.new(:remote,
+  :url => "http://zaqwsx1:Fs54nwmULt7BaSTosZxi@hub.browserstack.com/wd/hub",
+  :desired_capabilities => caps)
 
 counter=0
 puts "Oralb test"
