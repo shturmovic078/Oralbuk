@@ -50,7 +50,7 @@ worksheet.write(counter,1, loc1)
 worksheet.write(counter,2 ,browser.title)
 
 
-
+browser.screenshot.save counter.to_s<<".png"
 
 
 
