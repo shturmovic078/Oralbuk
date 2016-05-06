@@ -25,7 +25,7 @@ caps["browserstack.local"] = "true"
 browser = Watir::Browser.new(:remote,
   :url => "http://zaqwsx1:Fs54nwmULt7BaSTosZxi@hub.browserstack.com/wd/hub",
   :desired_capabilities => caps)
-browser.maximize()
+browser.window.maximize
 counter=0
 puts "Oralb test"
 csv_text = File.read('uk_new.csv',encoding: "iso-8859-1:UTF-8")
