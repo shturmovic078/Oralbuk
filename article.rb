@@ -15,17 +15,17 @@ worksheet  = workbook.add_worksheet
 include Selenium
 
 caps = WebDriver::Remote::Capabilities.new
-caps['browser'] = 'IE'
-caps['browser_version'] = '10.0'
-caps['os'] = 'Windows'
-caps['os_version'] = '7'
+caps['browser'] = 'Firefox'
+caps['browser_version'] = '46.0'
+caps['os'] = 'OS X'
+caps['os_version'] = 'Yosemite'
 caps['resolution'] = '1024x768'
 caps["browserstack.debug"] = "true"
 caps["browserstack.local"] = "true"
 browser = Watir::Browser.new(:remote,
   :url => "http://zaqwsx1:Fs54nwmULt7BaSTosZxi@hub.browserstack.com/wd/hub",
   :desired_capabilities => caps)
-
+browser.maximize()
 counter=0
 puts "Oralb test"
 csv_text = File.read('uk_new.csv',encoding: "iso-8859-1:UTF-8")
